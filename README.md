@@ -16,4 +16,5 @@ Clone this repository. Then navigate to the project's directory and run ```npm i
 
 ## Scripts
 ```npm test```: runs the tests for ```convertTemperature``` composable.
+
 ```npm run dev```: serves the project to ```http://localhost:5173``` in development mode.
