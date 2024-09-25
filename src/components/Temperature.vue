@@ -1,25 +1,8 @@
 <script setup lang="ts">
+import convertTemperature from '@/composables/convertTemperature';
+import type { ITemperatureProps } from '@/typings/temperature';
 
-export type TemperatureScales = 'c' | 'f' | 'k' | 'r';
-export interface ITemperatureProps {
-	temperature: number,
-	scale: TemperatureScales
-}
-
-const props = defineProps<ITemperatureProps>();
-
-const convertedTemperature = () => {
-	switch (props.scale) {
-		case 'f':
-			return (props.temperature * 9 / 5) + 32;
-		case 'k':
-			return props.temperature + 273.15;
-		case 'r':
-			return (props.temperature * 9 / 5) + 491.67;
-		default:
-			return props.temperature;
-	}
-}
+defineProps<ITemperatureProps>();
 
 const fixedValue = (value: number) => {
 	return parseFloat(value.toFixed(2));
@@ -35,7 +18,7 @@ const fixedValue = (value: number) => {
 		<h2 class="text-2xl font-bold text-center mb-2" v-else>Celsius</h2>
 		<!-- input -->
 		<div class="flex gap-2 justify-center">
-			<input class="rounded border border-gray-500 px-2 w-28" type="number" :value="fixedValue(convertedTemperature())">
+			<input class="rounded border border-gray-500 px-2 w-28" type="number" :value="fixedValue(convertTemperature(temperature, 'c', scale))">
 			<span v-if="scale.toLowerCase() === 'f'">°F</span>
 			<span v-else-if="scale.toLowerCase() === 'k'">K</span>
 			<span v-else-if="scale.toLowerCase() === 'r'">°R</span>

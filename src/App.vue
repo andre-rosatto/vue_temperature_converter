@@ -1,25 +1,14 @@
 <script setup lang="ts">
-import Temperature, { type TemperatureScales } from './components/Temperature.vue';
-
+import Temperature from './components/Temperature.vue';
+import convertTemperature from './composables/convertTemperature';
+import type { TemperatureScales } from './typings/temperature';
 import { ref } from 'vue';
 
 const temperature = ref(0);
 
 const handleInput = (input: HTMLInputElement, scale: TemperatureScales) => {
 	const value = input.valueAsNumber || 0;
-	switch (scale) {
-		case 'f':
-			temperature.value = 5 / 9 * (value - 32);
-			break;
-		case 'k':
-			temperature.value = value - 273.15;
-			break;
-		case 'r':
-			temperature.value = (value - 491.67) * 5 / 9;
-			break;
-		default:
-			temperature.value = value;
-	}
+	temperature.value = convertTemperature(value, scale, 'c');
 }
 </script>
 
