@@ -1,33 +1,19 @@
-# temperature_converter
+# Temperature Converter
+Temperature converter for Celsius, Fahrenheit, Kelvin, and Rankine.
 
-This template should help get you started developing with Vue 3 in Vite.
+Written in Typescript, using Vue and Tailwind CSS.
 
-## Recommended IDE Setup
+## Using
+<img height="50" src="https://github.com/user-attachments/assets/6364c31a-da0f-4ee8-a69f-f33ad1f7c921" alt="HTML" title="HTML"/>
+<img height="50" src="https://github.com/user-attachments/assets/7c59f579-8108-4064-b758-5aa207f23e81" alt="CSS" title="CSS"/>
+<img height="50" src="https://github.com/user-attachments/assets/7db5f8cb-145d-40b6-84fa-a23632ced92e" alt="Tailwind CSS" title="Tailwind CSS"/>
+<img height="50" src="https://github.com/user-attachments/assets/262eb873-1f66-40c3-9261-c05604451284" alt="TypeScript" title="TypeScript"/>
+<img height="50" src="https://github.com/user-attachments/assets/03517900-9c97-47d2-941f-3444f07f3745" alt="Vue" title="Vue"/>
+<img height="50" src="https://github.com/user-attachments/assets/1f665f79-d1a3-464f-b4ac-3916b5d1a38b" alt="NPM" title="NPM"/>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Installation
+Clone this repository. Then navigate to the project's directory and run ```npm install``` to install the dependencies.
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+## Scripts
+```npm test```: runs the tests for ```convertTemperature``` composable.
+```npm run dev```: serves the project to ```http://localhost:5173``` in development mode.
