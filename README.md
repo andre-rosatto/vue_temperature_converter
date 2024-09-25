@@ -1,7 +1,7 @@
 # Temperature Converter
 Temperature converter for Celsius, Fahrenheit, Kelvin, and Rankine.
 
-Written in Typescript, using Vue and Tailwind CSS.
+Written in TypeScript, using Vue and Tailwind CSS.
 
 ## Using
 <img height="50" src="https://github.com/user-attachments/assets/6364c31a-da0f-4ee8-a69f-f33ad1f7c921" alt="HTML" title="HTML"/>
